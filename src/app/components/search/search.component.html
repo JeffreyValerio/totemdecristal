@@ -1,0 +1,18 @@
+<div class="container py-5">
+    <div class="animated fadeIn fast my-4">
+        <!-- <hr class="mt-2 mb-5"> -->
+        <h5 class="mb-4">Buscando: <small>{{term}}</small></h5>
+
+        <div class="row" *ngIf="productArr.length == 0">
+            <div class="col-md-12">
+                <div class="alert alert-info" role="alert">
+                    El producto buscado no existe, intente con otro término.
+                </div>
+            </div>
+        </div>
+
+        <div class="card-columns text-center text-lg-left">
+            <app-product-card [product]="product" *ngFor="let product of productArr"></app-product-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<!-- <app-topbar></app-topbar> -->
+
+<nav>
+    <input id="nav-toggle" type="checkbox">
+    <!-- <div [routerLink]="['/']" class="navbar-brand ">TOTEM DE CRISTAL</div> -->
+    <a class="brand" [routerLink]="['/']">TOTEM DE CRISTAL</a>
+    <ul class="links">
+        <li><a [routerLink]="['/']">Inicio</a></li>
+        <li><a [routerLink]="['/categories']">Categorías</a></li>
+        <li><a [routerLink]="['/products']">Productos</a></li>
+        <!-- <form class="form-inline my-2 my-lg-0"> -->
+        <!-- <input #findText (keyup)="findProduct(findText.value)" class="form-control mr-sm-2" type="search"
+                placeholder="Buscar producto" aria-label="Search"> -->
+        <!-- <button (click)="findProduct(findText.value)" class="btn btn-outline-secondary my-2 my-sm-0"
+                type="button">Buscar</button> -->
+        <!-- </form> -->
+    </ul>
+    <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+</nav>

@@ -1,0 +1,43 @@
+.item-purchase-banner .banner-button {
+  background-image: linear-gradient(109.6deg, #0b85ea 11.2%, #223fc9 91.1%);
+  border: none;
+  color: #ffffff;
+}
+
+.item-purchase-banner .banner-text {
+  margin-bottom: 0;
+  margin-right: 15px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.item-purchase-banner {
+  align-items: center;
+  background: #000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px;
+  top: 0px;
+  width: 100%;
+  z-index: 9990;
+}
+
+.item-purchase-banner .toggler-close {
+  margin-left: auto;
+  color: #ffffff;
+}
+
+.fab {
+  margin-left: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 479px) {
+  .item-purchase-banner {
+    display: none;
+  }
+}

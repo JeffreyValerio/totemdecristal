@@ -1,0 +1,9 @@
+.card {
+  border: none;
+  cursor: pointer;
+}
+
+.card img {
+  height: 200px;
+  object-fit: scale-down;
+}

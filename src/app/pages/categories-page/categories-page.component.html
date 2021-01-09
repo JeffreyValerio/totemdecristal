@@ -1,0 +1,20 @@
+<section id="categories" class="products-shopping container py-5 my-4">
+
+    <div class="head">
+        <div class="back">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <a [routerLink]="['/']"> Regresar</a>
+        </div>
+    </div>
+    <hr>
+    <div class="loading">
+        <app-loading *ngIf="loading"></app-loading>
+    </div>
+
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let product of products">
+            <app-product-card [product]="product"></app-product-card>
+        </ng-template>
+    </owl-carousel-o>
+
+</section>

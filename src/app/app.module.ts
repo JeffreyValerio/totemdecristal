@@ -1,18 +1,56 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductComponent } from './components/product/product.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { SearchComponent } from './components/search/search.component';
+import { ImageHeaderComponent } from './components/image-header/image-header.component';
+import { DeliveryComponent } from './components/delivery/delivery.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { CategorieCardComponent } from './components/categorie-card/categorie-card.component';
+import { CategoriesPageComponent } from './pages/categories-page/categories-page.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    TopbarComponent,
+    HomePageComponent,
+    NotFoundComponent,
+    ProductsComponent,
+    ProductComponent,
+    SearchComponent,
+    ProductCardComponent,
+    ImageHeaderComponent,
+    DeliveryComponent,
+    CategoriesComponent,
+    CategorieCardComponent,
+    CategoriesPageComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    CarouselModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

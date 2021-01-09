@@ -1,0 +1,44 @@
+<div class="container py-5">
+    <!-- Portfolio Item Row -->
+    <div class="row my-4 animated fadeIn fast">
+
+        <div class="col-md-8">
+            <img class="img-fluid" [src]="product.p_image" [alt]="product.p_name">
+        </div>
+
+        <div class="col-md-4">
+            <h4 class="mt-3"> {{product.p_name | uppercase}} </h4>
+            <h5 class="mb-4">
+                <small class="text-muted">SKU: {{product.p_cod}}</small>
+            </h5>
+            <p>{{product.p_description | uppercase}}</p>
+            <div class="product-price-discount"><span>{{product.p_priceN | currency:'CRC '}}</span><span
+                    class="line-through">{{product.p_priceN + 2958 | currency:'CRC '}}</span>
+            </div>
+            <h5 class="my-3">Materiales</h5>
+            <ul>
+                <li>Lorem Ipsum</li>
+                <li>Dolor Sit Amet</li>
+                <li>Consectetur</li>
+                <li>Adipiscing Elit</li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+    <!-- Related Projects Row -->
+    <h3 class="my-4 font-weight-light">Productos similares</h3>
+
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="#">
+                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+                </a>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+
+    <!-- /.row -->
+</div>

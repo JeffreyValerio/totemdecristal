@@ -1,0 +1,32 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { CategorieInterface } from '../models/categorie';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class CategorieService {
+  private API_URI = 'http://45.55.59.176:3000/api';
+
+  constructor(private http: HttpClient) {}
+
+  listCategories() {
+    return this.http.get(`${this.API_URI}/categories`);
+  }
+
+  listById(id: string) {
+    return this.http.get(`${this.API_URI}/categories/${id}`);
+  }
+
+  createCategorie(categorie: CategorieInterface) {
+    return this.http.post(`${this.API_URI}/categories`, categorie);
+  }
+
+  deleteCategorie(id: string) {
+    return this.http.delete(`${this.API_URI}/categories/${id}`);
+  }
+
+  updateCategorie(id: string, updatedCategorie: CategorieInterface) {
+    return this.http.put(`${this.API_URI}/categories/${id}`, updatedCategorie);
+  }
+}
