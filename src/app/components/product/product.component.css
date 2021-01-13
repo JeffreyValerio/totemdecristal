@@ -11,3 +11,8 @@
   vertical-align: middle;
   color: #a5a5a5;
 }
+
+.solicitar {
+  align-items: center;
+  display: flex;
+}

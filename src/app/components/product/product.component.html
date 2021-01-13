@@ -1,6 +1,11 @@
 <div class="container py-5">
     <!-- Portfolio Item Row -->
-    <div class="row my-4 animated fadeIn fast">
+
+    <div class="loading">
+        <app-loading *ngIf="loading"></app-loading>
+    </div>
+
+    <div class="row my-4 animated fadeIn fast" *ngIf="!loading">
 
         <div class="col-md-8">
             <img class="img-fluid" [src]="product.p_image" [alt]="product.p_name">
@@ -15,20 +20,32 @@
             <div class="product-price-discount"><span>{{product.p_priceN | currency:'CRC '}}</span><span
                     class="line-through">{{product.p_priceN + 2958 | currency:'CRC '}}</span>
             </div>
-            <h5 class="my-3">Materiales</h5>
+
+            <div class="my-4">
+                <h5>Solicitar producto</h5>
+
+                <div class="solicitar">
+                    <i class="fab fa-2x fa-whatsapp mr-2" style="color: green;"></i>
+                    <a target="_blank"
+                        href="https://api.whatsapp.com/send?phone=50671447395&text=Hola%2C%20visité%20tu%20página%20web%20y%20me%20gustaría%20conocer%20del%20producto:%20{{product.p_name}}%20SKU:%20{{product.p_cod}}">
+                        7144-7395
+                    </a>
+                </div>
+            </div>
+            <!-- <h5 class="my-3">Materiales</h5>
             <ul>
                 <li>Lorem Ipsum</li>
                 <li>Dolor Sit Amet</li>
                 <li>Consectetur</li>
                 <li>Adipiscing Elit</li>
-            </ul>
+            </ul> -->
         </div>
 
     </div>
     <!-- /.row -->
 
     <!-- Related Projects Row -->
-    <h3 class="my-4 font-weight-light">Productos similares</h3>
+    <!-- <h3 class="my-4 font-weight-light">Productos similares</h3>
 
     <owl-carousel-o [options]="customOptions">
         <ng-template carouselSlide>
@@ -38,7 +55,7 @@
                 </a>
             </div>
         </ng-template>
-    </owl-carousel-o>
+    </owl-carousel-o> -->
 
     <!-- /.row -->
 </div>

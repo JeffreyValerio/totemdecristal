@@ -57,12 +57,14 @@ export class CategoriesPageComponent implements OnInit {
   getProducts() {
     this.activatedRoute.params.subscribe((params) => {
       this.idCategorie = params.id;
+      console.log(this.idCategorie);
     });
 
     this.productService.getProducts().subscribe((res: ProductInterface[]) => {
       for (const product of res) {
         if (this.idCategorie === product.p_idCategorie) {
           this.products.push(product);
+          console.log(this.products);
           this.loading = false;
         }
       }

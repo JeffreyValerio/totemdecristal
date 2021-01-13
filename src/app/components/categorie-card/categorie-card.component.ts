@@ -14,6 +14,7 @@ export class CategorieCardComponent implements OnInit {
   ngOnInit(): void {}
 
   showCategorie(id: string) {
-    this.router.navigate(['/categorie', id]);
+    // this.router.navigate(['/categorie', id]);
+    console.log(this.categorie.id);
   }
 }

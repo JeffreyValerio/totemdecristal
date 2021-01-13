@@ -6,7 +6,7 @@ import { ProductInterface } from '../models/product';
   providedIn: 'root',
 })
 export class ProductService {
-  private API_URI = 'http://45.55.59.176:3000/api';
+  private API_URI = 'https://jeffreyvalerio.xyz/api';
 
   constructor(private http: HttpClient) {}
 

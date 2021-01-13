@@ -6,7 +6,7 @@ import { CategorieInterface } from '../models/categorie';
   providedIn: 'root',
 })
 export class CategorieService {
-  private API_URI = 'http://45.55.59.176:3000/api';
+  private API_URI = 'https://jeffreyvalerio.xyz/api';
 
   constructor(private http: HttpClient) {}
 
