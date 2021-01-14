@@ -10,6 +10,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
+  products: ProductInterface[] = [];
   productId: string;
   product: any = {};
   loading: boolean;
@@ -60,5 +61,17 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts() {
+    this.productService.getProducts().subscribe(
+      (res: ProductInterface[]) => {
+        this.products = res;
+        this.loading = false;
+      },
+      (err) => console.log(err)
+    );
+  }
 }

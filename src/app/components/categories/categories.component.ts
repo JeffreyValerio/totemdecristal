@@ -1,3 +1,4 @@
+import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
@@ -57,6 +58,7 @@ export class CategoriesComponent implements OnInit {
     this.categorieService.listCategories().subscribe(
       (res: CategorieInterface[]) => {
         this.categories = res;
+        console.log(this.categories);
         this.loading = false;
       },
       (err) => console.log(err)
@@ -64,6 +66,7 @@ export class CategoriesComponent implements OnInit {
   }
 
   showCategorie(id: string) {
+    console.log(id);
     this.router.navigate(['/categorie', id]);
   }
 }

@@ -16,3 +16,16 @@
   align-items: center;
   display: flex;
 }
+
+.imagen {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-height: 400px;
+}
+
+.similarProducts {
+  margin-top: 100px;
+}
