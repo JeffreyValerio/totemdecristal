@@ -89,7 +89,6 @@
 }
 .single-footer-widget .copywrite-text a {
   color: #747794;
-  /* font-size: 1rem; */
 }
 .single-footer-widget .copywrite-text a:hover,
 .single-footer-widget .copywrite-text a:focus {
@@ -103,7 +102,6 @@
   font-size: 12px;
   margin-bottom: 1rem;
   display: block;
-  /* font-size: 1rem; */
 }
 .single-footer-widget .footer_menu li a:hover,
 .single-footer-widget .footer_menu li a:focus {

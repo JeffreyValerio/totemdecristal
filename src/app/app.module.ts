@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { SidebarModule } from 'ng-sidebar';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -49,6 +51,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
     FormsModule,
     CarouselModule,
     BrowserAnimationsModule,
+    SidebarModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

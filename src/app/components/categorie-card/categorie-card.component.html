@@ -1,10 +1,10 @@
 <div class="card animated fadeIn fast">
-    <div (click)="showCategorie(categorie.id)" class="d-block mb-4 h-100">
+    <a [routerLink]="['/categorie', categorie.c_id]" class="d-block h-100">
         <img class="card-img-top" [src]="categorie.c_image === '' ? 
             'https://firebasestorage.googleapis.com/v0/b/totemdecristal.appspot.com/o/noimage.png?alt=media&token=ff3f868f-3218-43db-9ac3-105ee4a8fed7'
             : categorie.c_image" [alt]="categorie.c_name" [title]="categorie.c_name">
         <div class="card-body text-center">
-            <h5>{{categorie.c_name | uppercase}}</h5>
+            <h6>{{categorie.c_name | uppercase}}</h6>
         </div>
-    </div>
+    </a>
 </div>

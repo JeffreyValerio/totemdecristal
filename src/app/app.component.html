@@ -1,3 +1,37 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<!-- Container for sidebar(s) + page content -->
+<ng-sidebar-container>
+
+    <!-- A sidebar -->
+    <ng-sidebar [(opened)]="opened" [closeOnClickOutside]="closeOnClickOutside">
+        <div class="text-justify mt-4 sidebar">
+            <button (click)="toggleOpened()" class="header__toggle mb-2 ml-4">SALIR</button>
+
+            <img src="../assets/logo.png" alt="logo" class="logo mb-2" />
+            <a class="brandP mt-2" [routerLink]="['/']">TOTEM DE CRISTAL</a>
+
+            <ul class="links animate__animated animate__backInRight">
+                <li><a closeSidebar [routerLink]="['/']">Inicio</a></li>
+                <li><a closeSidebar [routerLink]="['/categories']">Categorías</a></li>
+                <li><a closeSidebar [routerLink]="['/products']">Productos</a></li>
+                <form class="form-inline my-2 my-lg-0 formSearch">
+                    <input #findText (keyup.enter)="findProduct(findText.value)" class="form-control" type="search"
+                        placeholder="Buscar producto">
+                    <button closeSidebar (click)="findProduct(findText.value)"
+                        class="btn btn-outline-secondary btn-sm btn-block mt-2" type="button">Buscar</button>
+                </form>
+            </ul>
+        </div>
+    </ng-sidebar>
+
+    <!-- Page content -->
+    <div ng-sidebar-content>
+        <header class="header">
+            <button (click)="toggleOpened()" class="header__toggle">Toggle sidebar</button>
+            <a class="brand animate__animated animate__backInLeft" [routerLink]="['/']">TOTEM DE CRISTAL</a>
+        </header>
+        <!-- <app-navbar></app-navbar> -->
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </div>
+
+</ng-sidebar-container>

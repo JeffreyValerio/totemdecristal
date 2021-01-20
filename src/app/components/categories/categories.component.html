@@ -1,14 +1,15 @@
 <div class="container animated fadeIn fast categories">
 
-    <h3 class="font-weight-light text-center my-4">Categorías</h3>
+    <h3 class="font-weight-light text-center animate__animated animate__zoomIn mb-4">Categorías</h3>
 
     <div class="loading">
         <app-loading *ngIf="loading"></app-loading>
     </div>
 
-    <owl-carousel-o [options]="customOptions">
+    <owl-carousel-o [options]="customOptions" class="animate__animated animate__zoomIn">
         <ng-template carouselSlide *ngFor="let categorie of categories">
-            <app-categorie-card [categorie]="categorie" (categorieSelected)="showCategorie(categorie.id)">
+            <app-categorie-card [categorie]="categorie" [idCategorie]="categorie.c_id"
+                (categorieSelected)="showCategorie(categorie.c_id)">
             </app-categorie-card>
         </ng-template>
     </owl-carousel-o>

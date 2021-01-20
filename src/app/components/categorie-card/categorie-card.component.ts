@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categorie-card',
@@ -8,17 +7,16 @@ import { Router } from '@angular/router';
 })
 export class CategorieCardComponent implements OnInit {
   @Input() categorie: any = {};
+  @Input() idCategorie: number;
   @Output() categorieSelected: EventEmitter<number>;
 
-  constructor(private router: Router) {
+  constructor() {
     this.categorieSelected = new EventEmitter();
   }
 
   ngOnInit(): void {}
 
-  showCategorie(id: string) {
-    // this.router.navigate(['/categorie', id]);
-    // console.log(this.categorie.id);
-    this.categorieSelected.emit(this.categorie);
+  showCategorie() {
+    this.categorieSelected.emit(this.idCategorie);
   }
 }

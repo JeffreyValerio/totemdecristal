@@ -1,12 +1,12 @@
 <div class="container animated fadeIn fast products">
 
-    <h3 class="font-weight-light text-center my-4">Productos</h3>
+    <h3 class="font-weight-light text-center animate__animated animate__zoomIn mb-4">Productos</h3>
 
     <div class="loading">
         <app-loading *ngIf="loading"></app-loading>
     </div>
 
-    <owl-carousel-o [options]="customOptions" *ngIf="!loading">
+    <owl-carousel-o [options]="customOptions" *ngIf="!loading" class="animate__animated animate__zoomIn">
         <ng-template carouselSlide *ngFor="let product of products">
             <app-product-card [product]="product"></app-product-card>
         </ng-template>

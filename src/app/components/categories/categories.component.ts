@@ -1,5 +1,4 @@
-import { identifierName } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CategorieInterface } from 'src/app/models/categorie';
@@ -11,6 +10,7 @@ import { CategorieService } from '../../services/categorie.service';
   styleUrls: ['./categories.component.css'],
 })
 export class CategoriesComponent implements OnInit {
+  @Output() categorieSelected: EventEmitter<number>;
   categories: CategorieInterface[] = [];
   loading: boolean;
 
@@ -47,6 +47,7 @@ export class CategoriesComponent implements OnInit {
     private router: Router,
     private categorieService: CategorieService
   ) {
+    this.categorieSelected = new EventEmitter();
     this.loading = true;
   }
 
@@ -58,7 +59,6 @@ export class CategoriesComponent implements OnInit {
     this.categorieService.listCategories().subscribe(
       (res: CategorieInterface[]) => {
         this.categories = res;
-        console.log(this.categories);
         this.loading = false;
       },
       (err) => console.log(err)
@@ -66,7 +66,6 @@ export class CategoriesComponent implements OnInit {
   }
 
   showCategorie(id: string) {
-    console.log(id);
     this.router.navigate(['/categorie', id]);
   }
 }

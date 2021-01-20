@@ -1,12 +1,19 @@
-<section id="categories" class="products-shopping container py-5 my-4">
+<div class="container">
 
     <div class="head">
-        <div class="back">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            <a [routerLink]="['/']"> Regresar</a>
-        </div>
+        <i class="fa fa-chevron-left"></i>
+        <a [routerLink]="['/']"> Regresar</a>
     </div>
+
     <hr>
+
+    <div class="text-center" role="alert" *ngIf="products.length == 0">
+        <p>
+            <i class="fa fa-2x fa-search mr-2 my-4"></i>
+            No hay productos en la categoría seleccionada. Pronto añadiremos lo que buscas.
+        </p>
+    </div>
+
     <div class="loading">
         <app-loading *ngIf="loading"></app-loading>
     </div>
@@ -17,4 +24,4 @@
         </ng-template>
     </owl-carousel-o>
 
-</section>
+</div>

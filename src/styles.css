@@ -2,7 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-  padding-top: 80px;
+  height: 100vh;
+}
+
+.ng-sidebar {
+  background-color: #fff;
+  position: absolute;
+  width: 415px;
+  z-index: 9;
 }
 
 img {
@@ -23,13 +30,13 @@ img {
 a:link,
 a:visited,
 a:active {
+  /* font-size: 1rem; */
+  font-weight: 400;
   text-decoration: none;
 }
 
-.head {
-  display: flex;
-  margin-top: 40px;
-  justify-content: space-between;
+p {
+  font-weight: 300;
 }
 
 .animated {
@@ -124,5 +131,9 @@ a:active {
 
   h5 {
     font-size: 13px;
+  }
+
+  .ng-sidebar {
+    width: 100%;
   }
 }

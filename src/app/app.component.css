@@ -1,0 +1,98 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  align-items: center;
+  background: #0273d4;
+  color: #fff;
+  display: flex;
+  padding: 1em;
+  position: fixed !important;
+  width: 100%;
+  z-index: 1;
+}
+
+.header__toggle {
+  background: transparent;
+  border: 0.15rem solid #ccc;
+  border-left: 0;
+  border-right: 0;
+  cursor: pointer;
+  font-size: 0;
+  height: 1.5rem;
+  margin-right: 1rem;
+  position: relative;
+  width: 2rem;
+}
+
+.header__toggle:after {
+  background: #ccc;
+  content: "";
+  height: 0.15rem;
+  left: 0;
+  margin-top: -0.075rem;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  color: #fff;
+  float: left;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.brandP {
+  color: #c1c1c1;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.links {
+  border-top: 1px solid #c1c1c1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.4rem;
+  margin-top: 20px;
+  height: 100%;
+  padding: 0;
+}
+
+.links li {
+  list-style: none;
+}
+
+.links a {
+  color: #c1c1c1;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 1em 0;
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 100px;
+}
+
+.formSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.formSearch input {
+  width: 100%;
+}

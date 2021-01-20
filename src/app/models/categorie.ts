@@ -1,5 +1,5 @@
 export interface CategorieInterface {
-  id?: string;
+  c_id?: string;
   c_name?: string;
   c_image?: string;
   c_visible?: boolean;

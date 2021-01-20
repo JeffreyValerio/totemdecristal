@@ -6,7 +6,6 @@
 <div class="container py-5" *ngIf="!loading">
     <!-- Portfolio Item Row -->
 
-
     <div class="row my-4 animated fadeIn fast">
 
         <div class="col-md-6 imagen">
@@ -47,7 +46,7 @@
     <!-- /.row -->
 
     <!-- Related Projects Row -->
-    <h3 class="mb-4 font-weight-light similarProducts">Productos similares</h3>
+    <h5 class="mb-4 font-weight-light similarProducts">Productos similares</h5>
 
     <owl-carousel-o [options]="customOptions" *ngIf="!loading">
         <ng-template carouselSlide *ngFor="let product of products">

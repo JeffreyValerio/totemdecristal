@@ -5,5 +5,13 @@
 
 .card img {
   height: 200px;
-  object-fit: scale-down;
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 479px) {
+  h6 {
+    font-size: 0.75em;
+  }
 }

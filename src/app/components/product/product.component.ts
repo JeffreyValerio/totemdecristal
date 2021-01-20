@@ -51,9 +51,7 @@ export class ProductComponent implements OnInit {
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.productId = params.id;
-      console.log(this.productId);
       this.loading = true;
-      // this.productId = this.productService.getProduct(params['id']);
     });
     this.productService.getProduct(this.productId).subscribe((res) => {
       this.product = res;
