@@ -10,7 +10,6 @@ export class AppComponent {
   opened: boolean = false;
   closeOnClickOutside = true;
 
-  title = 'Totem de Cristal';
   constructor(private router: Router) {}
 
   findProduct(term: string) {

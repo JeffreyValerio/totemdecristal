@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SidebarModule } from 'ng-sidebar';
+import { DisqusModule } from 'ngx-disqus';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { CategorieCardComponent } from './components/categorie-card/categorie-ca
 import { CategoriesPageComponent } from './pages/categories-page/categories-page.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { DisqusComponent } from './components/disqus/disqus.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
     CategorieCardComponent,
     CategoriesPageComponent,
     LoadingComponent,
+    DisqusComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
     CarouselModule,
     BrowserAnimationsModule,
     SidebarModule.forRoot(),
+    DisqusModule.forRoot('totemdecristal'),
   ],
   providers: [],
   bootstrap: [AppComponent],

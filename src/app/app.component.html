@@ -1,4 +1,6 @@
 <!-- Container for sidebar(s) + page content -->
+
+
 <ng-sidebar-container>
 
     <!-- A sidebar -->
@@ -29,6 +31,7 @@
             <button (click)="toggleOpened()" class="header__toggle">Toggle sidebar</button>
             <a class="brand animate__animated animate__backInLeft" [routerLink]="['/']">TOTEM DE CRISTAL</a>
         </header>
+
         <!-- <app-navbar></app-navbar> -->
         <router-outlet></router-outlet>
         <app-footer></app-footer>
