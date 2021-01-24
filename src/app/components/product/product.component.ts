@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { ProductInterface } from '../../models/product';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CategorieService } from '../../services/categorie.service';
+import { CategorieInterface } from 'src/app/models/categorie';
 
 @Component({
   selector: 'app-product',
@@ -10,6 +12,9 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
+  categories: CategorieInterface[] = [];
+  categorieName: string;
+  categorieId: string;
   products: ProductInterface[] = [];
   productId: string;
   product: any = {};
@@ -47,7 +52,8 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private categorieService: CategorieService
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.productId = params.id;
@@ -57,6 +63,8 @@ export class ProductComponent implements OnInit {
       this.product = res;
       this.loading = false;
     });
+
+    this.getCategories();
   }
 
   ngOnInit(): void {
@@ -68,6 +76,21 @@ export class ProductComponent implements OnInit {
       (res: ProductInterface[]) => {
         this.products = res;
         this.loading = false;
+      },
+      (err) => console.log(err)
+    );
+  }
+
+  getCategories() {
+    this.categorieService.listCategories().subscribe(
+      (res: CategorieInterface[]) => {
+        for (const categorie of res) {
+          if (categorie.c_id == this.product.p_idCategorie) {
+            this.categorieName = categorie.c_name;
+            this.categorieId = categorie.c_id;
+          }
+        }
+        this.categories = res;
       },
       (err) => console.log(err)
     );

@@ -3,15 +3,18 @@
   flex-direction: column;
 }
 
-.header {
+.headers {
   align-items: center;
-  background: #0273d4;
-  color: #fff;
   display: flex;
+  justify-content: space-between;
   padding: 1em;
   position: fixed !important;
   width: 100%;
   z-index: 1;
+}
+
+.header {
+  display: flex;
 }
 
 .header__toggle {
@@ -41,7 +44,7 @@
 .brand {
   align-items: center;
   display: flex;
-  color: #fff;
+  color: #212121;
   float: left;
   height: 100%;
   font-size: 20px;

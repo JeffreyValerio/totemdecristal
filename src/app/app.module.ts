@@ -26,6 +26,8 @@ import { CategoriesPageComponent } from './pages/categories-page/categories-page
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { LoadingComponent } from './shared/loading/loading.component';
 import { DisqusComponent } from './components/disqus/disqus.component';
+import { ComodinComponent } from './components/comodin/comodin.component';
+import { LatestProductsComponent } from './components/latest-products/latest-products.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { DisqusComponent } from './components/disqus/disqus.component';
     CategoriesPageComponent,
     LoadingComponent,
     DisqusComponent,
+    ComodinComponent,
+    LatestProductsComponent,
   ],
   imports: [
     BrowserModule,

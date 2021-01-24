@@ -32,13 +32,13 @@ export class CategoriesComponent implements OnInit {
         items: 2,
       },
       400: {
-        items: 2,
-      },
-      740: {
         items: 3,
       },
-      940: {
+      740: {
         items: 4,
+      },
+      940: {
+        items: 5,
       },
     },
     nav: true,

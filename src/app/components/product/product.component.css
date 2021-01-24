@@ -48,20 +48,19 @@
   color: #5b5b5b;
 }
 
-.product_price {
-  display: inline-block;
-  font-size: 30px;
-  font-weight: 500;
-  margin-top: 9px;
+.product-price {
   clear: left;
+  display: inline-block;
+  margin-top: 9px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.product_discount span.line-through {
-  text-decoration: line-through;
-  margin-left: 10px;
-  font-size: 14px;
-  vertical-align: middle;
+.line-through {
   color: #a5a5a5;
+  font-size: 14px;
+  text-decoration: line-through;
+  vertical-align: middle;
 }
 
 .product_discount {
