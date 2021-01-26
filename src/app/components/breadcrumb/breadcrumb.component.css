@@ -1,0 +1,100 @@
+.breadcrumb {
+  background-color: #fff;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  margin-top: 90px;
+  padding: 0;
+  width: 100%;
+}
+
+.breadcrumb .btn {
+  border: 0px solid transparent;
+  border-color: transparent;
+  border-right: 1px solid transparent !important;
+  font-size: 11px;
+}
+
+.breadcrumb-default {
+  background-color: #fff;
+}
+
+.breadcrumb .btn:last-child {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.breadcrumb .btn:last-child:after {
+  margin-left: -2px;
+}
+
+.breadcrumb .btn:last-child:before {
+  margin-left: -1px;
+}
+
+.breadcrumb .btn:after {
+  border-bottom: 14px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 15px solid #1f9bcf;
+  content: " ";
+  display: block;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+  margin-left: 0px;
+  left: 100%;
+  width: 0;
+  z-index: 3;
+}
+
+.breadcrumb .btn:before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 10px solid rgb(173, 173, 173);
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 3;
+}
+
+/** The Spacing **/
+.breadcrumb .btn {
+  padding: 6px 12px 6px 24px;
+}
+
+.breadcrumb .btn:first-child {
+  padding: 6px 6px 6px 10px;
+}
+
+.breadcrumb .btn:last-child {
+  padding: 6px 18px 6px 24px;
+}
+
+/** Default button **/
+.breadcrumb .btn.btn-default:after {
+  border-left: 10px solid #fff;
+}
+
+.breadcrumb .btn.btn-default:hover:after {
+  border-left: 10px solid #e6e6e6;
+}
+.breadcrumb .btn.btn-default:hover:before,
+.breadcrumb .btn.btn-default:before {
+  border-left: 10px solid #adadad;
+}
+.breadcrumb-default {
+  border: solid 1px #adadad;
+}
+
+@media (max-width: 767px) {
+  .breadcrumb {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 20px) !important;
+  }
+}

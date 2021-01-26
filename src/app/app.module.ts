@@ -28,6 +28,8 @@ import { LoadingComponent } from './shared/loading/loading.component';
 import { DisqusComponent } from './components/disqus/disqus.component';
 import { ComodinComponent } from './components/comodin/comodin.component';
 import { LatestProductsComponent } from './components/latest-products/latest-products.component';
+import { SimilarProductsComponent } from './components/similar-products/similar-products.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { LatestProductsComponent } from './components/latest-products/latest-pro
     DisqusComponent,
     ComodinComponent,
     LatestProductsComponent,
+    SimilarProductsComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,

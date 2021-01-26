@@ -1,20 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product.service';
-import { ProductInterface } from '../../models/product';
+import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ProductInterface } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css'],
+  selector: 'app-similar-products',
+  templateUrl: './similar-products.component.html',
+  styleUrls: ['./similar-products.component.css'],
 })
-export class ProductsComponent implements OnInit {
+export class SimilarProductsComponent implements OnInit {
+  @Input() idCategorie: string;
+  @Input() productId: string;
   products: ProductInterface[] = [];
-  loading: boolean;
 
   customOptions: OwlOptions = {
     loop: true,
-    autoplayHoverPause: true,
+    autoWidth: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
@@ -43,21 +45,29 @@ export class ProductsComponent implements OnInit {
     nav: true,
   };
 
-  constructor(private productService: ProductService) {
-    this.loading = true;
-  }
-
-  ngOnInit(): void {
+  constructor(private productService: ProductService, private router: Router) {
     this.getProducts();
   }
+
+  ngOnInit(): void {}
 
   getProducts() {
     this.productService.getProducts().subscribe(
       (res: ProductInterface[]) => {
-        this.products = res;
-        this.loading = false;
+        for (const product of res) {
+          if (
+            this.idCategorie == product.p_idCategorie &&
+            product.id != this.productId
+          )
+            this.products.push(product);
+        }
       },
       (err) => console.log(err)
     );
+  }
+
+  showProduct(idProduct: number) {
+    this.getProducts();
+    this.router.navigate(['/product', idProduct]);
   }
 }

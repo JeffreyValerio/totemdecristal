@@ -1,18 +1,3 @@
-.breadcrumb-item + .breadcrumb-item::before {
-  content: ">";
-}
-
-.breadcrumb {
-  background-color: #ffffff;
-  border-radius: 0.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 0rem;
-  padding: 0.1rem 0rem !important;
-  text-transform: uppercase;
-  -ms-flex-wrap: wrap;
-}
-
 .single_product {
   background-color: #e5e5e5;
   margin-top: 0px;

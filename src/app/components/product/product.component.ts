@@ -15,9 +15,10 @@ export class ProductComponent implements OnInit {
   categories: CategorieInterface[] = [];
   categorieName: string;
   categorieId: string;
-  products: ProductInterface[] = [];
-  productId: string;
   product: any = {};
+  products: ProductInterface[] = [];
+  productName: string;
+  productId: string;
   loading: boolean;
 
   customOptions: OwlOptions = {
@@ -63,18 +64,18 @@ export class ProductComponent implements OnInit {
       this.product = res;
       this.loading = false;
     });
-
     this.getCategories();
-  }
-
-  ngOnInit(): void {
     this.getProducts();
   }
+
+  ngOnInit(): void {}
 
   getProducts() {
     this.productService.getProducts().subscribe(
       (res: ProductInterface[]) => {
         this.products = res;
+        this.productName = this.product.p_name;
+        this.getCategories();
         this.loading = false;
       },
       (err) => console.log(err)

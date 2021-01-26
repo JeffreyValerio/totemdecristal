@@ -6,14 +6,9 @@ body {
 }
 
 .ng-sidebar {
-  background-color: #fff;
   position: absolute;
   width: 415px;
   z-index: 9;
-}
-
-img {
-  object-fit: scale-down !important;
 }
 
 * {

@@ -1,0 +1,12 @@
+<owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let product of products">
+        <div class="card animated fadeIn fast">
+            <div (click)="showProduct(product.id)" class="d-block mb-4 h-100">
+                <!-- <a [routerLink]="['/product', product.id]" class="d-block mb-4 h-100"> -->
+                <img class="img-fluid" [src]="product.p_image" [alt]="product.p_name">
+                <h6 class="my-2 text-center">{{product.p_name}}</h6>
+                <!-- </a> -->
+            </div>
+        </div>
+    </ng-template>
+</owl-carousel-o>

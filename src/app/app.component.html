@@ -7,7 +7,7 @@
 
     <!-- A sidebar -->
     <ng-sidebar [(opened)]="opened" [closeOnClickOutside]="closeOnClickOutside">
-        <div class="text-justify mt-4 sidebar">
+        <div class="text-justify sidebar">
             <button (click)="toggleOpened()" class="header__toggle mb-2 ml-4">SALIR</button>
 
             <img src="../assets/logo.png" alt="logo" class="logo mb-2" />
@@ -29,13 +29,11 @@
 
     <!-- Page content -->
     <div ng-sidebar-content>
-        <div class="headers">
+        <div class="header">
             <button (click)="toggleOpened()" class="header__toggle">Toggle sidebar</button>
             <a class="brand animate__animated animate__backInLeft" [routerLink]="['/']">TOTEM DE CRISTAL</a>
             <app-navbar></app-navbar>
         </div>
-        <header class="header">
-        </header>
 
         <router-outlet></router-outlet>
 
